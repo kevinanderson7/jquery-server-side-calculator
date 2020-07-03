@@ -63,6 +63,7 @@ function postEquation() {
     console.log('post equation: ', response);
   });
   getEquation();
+  render();
 }
 
 function getEquation() {

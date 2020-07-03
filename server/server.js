@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.listen(5000, () => {
-  console.log('Listening on port 5001');
+  console.log('Listening on port 5000');
 });
 
 const equationHistory = [];
