@@ -48,17 +48,21 @@ function calculate() {
   console.log(secondNum);
   equation.num1 = firstNum;
   equation.num2 = secondNum;
-  equation.answer = equation.num1 + equation.math + equation.num2;
-  equation.answer = eval(equation.answer);
+  //   equation.answer = equation.num1 + equation.math + equation.num2;
+  //   equation.answer = eval(equation.answer);
   console.log(equation);
+  postEquation();
+}
 
+function postEquation() {
   $.ajax({
     method: 'POST',
     url: '/equation',
     data: equation,
   }).then((response) => {
-    console.log(response);
+    console.log('post equation: ', response);
   });
+  getEquation();
 }
 
 function getEquation() {
@@ -68,4 +72,10 @@ function getEquation() {
   }).then((response) => {
     console.table(response);
   });
+}
+
+function render() {
+  $('#history').text(
+    `<li>${equation.num1} ${equation.math} ${equation.num2} = ${equation.answer}</li>`
+  );
 }
