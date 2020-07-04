@@ -1,11 +1,21 @@
 body {
+  margin: 15px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
+.weekendChallenge {
   text-align: center;
   font-size: 3em;
 }
 
 h2 {
   font-size: 2em;
+}
+
+#totalDiv {
+  display: inline-block;
+}
+
+ul {
+  font-size: 1.5em;
 }

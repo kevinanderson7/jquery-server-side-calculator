@@ -96,9 +96,16 @@ function render(history) {
 
   $('#history').empty();
   for (let equation of history) {
+    equation.answer = formatNumber(equation.answer);
     $('#history').append(
       `<li>${equation.num1} ${equation.math} ${equation.num2} = ${equation.answer}</li>`
     );
+    equation.answer = formatNumber(equation.answer);
+
     $('#total').text(`${equation.answer}`);
   }
+}
+
+function formatNumber(num) {
+  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
 }
