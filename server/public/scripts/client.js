@@ -46,14 +46,22 @@ function clickClear() {
 function calculate() {
   firstNum = $('#jsInputNumOne').val();
   secondNum = $('#jsInputNumTwo').val();
-  console.log(firstNum);
-  console.log(secondNum);
-  equation.num1 = firstNum;
-  equation.num2 = secondNum;
-  //   equation.answer = equation.num1 + equation.math + equation.num2;
-  //   equation.answer = eval(equation.answer);
-  console.log(equation);
-  postEquation();
+
+  if (firstNum == false || secondNum == false) {
+    alert('Please input numbers for calculation');
+    return false;
+  } else {
+    // firstNum = $('#jsInputNumOne').val();
+    // secondNum = $('#jsInputNumTwo').val();
+    console.log(firstNum);
+    console.log(secondNum);
+    equation.num1 = firstNum;
+    equation.num2 = secondNum;
+    //   equation.answer = equation.num1 + equation.math + equation.num2;
+    //   equation.answer = eval(equation.answer);
+    console.log(equation);
+    postEquation();
+  }
 }
 
 function postEquation() {
