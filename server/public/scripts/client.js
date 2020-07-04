@@ -63,7 +63,6 @@ function postEquation() {
     console.log('post equation: ', response);
   });
   getEquation();
-  render();
 }
 
 function getEquation() {
@@ -72,11 +71,15 @@ function getEquation() {
     url: '/equation',
   }).then((response) => {
     console.table(response);
+    render(response);
   });
 }
 
-function render() {
-  $('#history').text(
-    `<li>${equation.num1} ${equation.math} ${equation.num2} = ${equation.answer}</li>`
-  );
+function render(history) {
+  for (let equation of history) {
+    $('#history').append(
+      `<li>${equation.num1} ${equation.math} ${equation.num2} = ${equation.answer}</li>`
+    );
+    $('#total').text(`${equation.answer}`);
+  }
 }
