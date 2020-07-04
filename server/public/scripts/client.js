@@ -76,6 +76,10 @@ function getEquation() {
 }
 
 function render(history) {
+  $('#jsInputNumOne').val('');
+  $('#jsInputNumTwo').val('');
+
+  $('#history').empty();
   for (let equation of history) {
     $('#history').append(
       `<li>${equation.num1} ${equation.math} ${equation.num2} = ${equation.answer}</li>`
