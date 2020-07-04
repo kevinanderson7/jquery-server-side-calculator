@@ -17,6 +17,7 @@ function init() {
   $('#divisionButton').on('click', clickDivison);
   $('#equalsButton').on('click', calculate);
   $('#clearButton').on('click', clickClear);
+  getEquation();
 }
 
 function clickAddition() {
