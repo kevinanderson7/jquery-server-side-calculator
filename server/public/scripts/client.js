@@ -40,6 +40,7 @@ function clickClear() {
   firstNum = $('#jsInputNumOne').val('');
   secondNum = $('#jsInputNumTwo').val('');
   equation.math = 0;
+  $('#total').text('');
 }
 function calculate() {
   firstNum = $('#jsInputNumOne').val();
