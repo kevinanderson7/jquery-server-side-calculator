@@ -47,7 +47,12 @@ function calculate() {
   firstNum = $('#jsInputNumOne').val();
   secondNum = $('#jsInputNumTwo').val();
 
-  if (firstNum == false || secondNum == false) {
+  if (
+    firstNum == undefined ||
+    secondNum == undefined ||
+    firstNum == '' ||
+    secondNum == ''
+  ) {
     alert('Please input numbers for calculation');
     return false;
   } else {
