@@ -51,7 +51,8 @@ function calculate() {
     firstNum == undefined ||
     secondNum == undefined ||
     firstNum == '' ||
-    secondNum == ''
+    secondNum == '' ||
+    equation.math == 0
   ) {
     alert('Please input numbers for calculation');
     return false;

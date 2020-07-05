@@ -1,21 +1,30 @@
 body {
   margin: 15px;
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url('cable-image.jpg');
+  background-size: cover;
+  opacity: 0.8;
 }
 
 .weekendChallenge {
   text-align: center;
   font-size: 3em;
+  color: whitesmoke;
 }
 
 h2 {
   font-size: 2em;
+  color: whitesmoke;
 }
 
 #totalDiv {
   display: inline-block;
+  color: whitesmoke;
 }
 
 ul {
   font-size: 1.5em;
+  background-color: papayawhip;
+  display: inline-block;
+  padding-right: 20px;
 }
